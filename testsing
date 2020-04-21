@@ -1,0 +1,34 @@
+<html>
+<body>
+<pre>
+<?php
+//第一题
+$arr1 = range(0, 9);
+echo "第一题:</br>";
+echo "数组arr1为：</br>" ;
+print_r($arr1);
+$key = array_search(0, $arr1); 
+// echo $key;
+if ($key !== false) {
+	echo "0在数组arr1中，索引/键名是 $key 。";
+} else {
+	echo "0不在数组arr1中。";
+}
+echo "<hr>";
+//第二题
+echo "第二题:</br>";
+$fen = [85,92,73,96,100,89,67,81,95,88];
+sort($fen);
+echo "原评分:</br>";
+print_r($fen);
+array_shift($fen);
+array_pop($fen);
+echo "去极评分:</br>";
+print_r($fen);
+$jun = array_sum($fen)/count($fen);
+echo "平均分:".$jun;
+
+?>
+</pre>
+</body>
+</html>
